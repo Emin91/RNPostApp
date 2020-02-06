@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View, Image, ScrollView, TouchableNativeFeedback, StyleSheet } from 'react-native'
 import { DATA } from '../src/data'
+import ColorValueChange from './ColorValueChange'
 
 const DetailsScreen = ({ navigation }) => {
     const postId = navigation.getParam('postId')
@@ -23,6 +24,7 @@ const DetailsScreen = ({ navigation }) => {
                     <Text style={styles.deleteBtn}>Delete</Text>
                 </View>
             </TouchableNativeFeedback>
+            <ColorValueChange />
         </View>
     )
 }

@@ -11,7 +11,6 @@ const ColorValueChange = ({ color, onIncrease, onDecrease }) => {
             <Button
                 onPress={() => onDecrease()}
                 title={`Decrease ${color}`} />
-
         </View>
     )
 }

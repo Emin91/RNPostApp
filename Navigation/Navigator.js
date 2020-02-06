@@ -8,6 +8,10 @@ import Json from '../Screens/Json'
 import ImageCard from '../Screens/ImageCard'
 import RandomColors from '../Screens/RandomColors'
 import ColorValue from '../Screens/ColorValue'
+import Comp1 from '../Screens/Comp1'
+import TextInputExample from '../Screens/TextInputExample'
+import ViewTypes from '../Screens/ViewTypes'
+import MoveView from '../Screens/MoveView'
 
 const AppContainer = createStackNavigator({
     S1: {
@@ -21,8 +25,12 @@ const AppContainer = createStackNavigator({
     S4: { screen: ImageCard },
     S5: { screen: RandomColors },
     S6: { screen: ColorValue },
+    S7: { screen: Comp1 },
+    S8: { screen: TextInputExample },
+    S9: { screen: ViewTypes },
+    S10: { screen: MoveView },
 },
     {
-        initialRouteName: 'S6'
+        initialRouteName: 'S10'
     })
 export default createAppContainer(AppContainer)
