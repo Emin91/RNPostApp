@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, TouchableOpacity, StyleSheet, TextInput, Picker } from 'react-native'
+import { View, Text, StyleSheet, Picker, } from 'react-native'
 
 
 
@@ -9,16 +9,20 @@ const MoveView = () => {
     const [align, setAlign] = useState('center')
     const [direct, setDirect] = useState('column')
 
-    const [plus, setPlus] = useState(70)
-
+    const setOk=()=>{
+        if(align === 'center' && justify === 'center') {
+            alert(`justifyContent: ${justify},  alignItem: ${align}`)
+        }
+    }
+    
     return (
         <View style={styles.mainView}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+            <View style={{ flex: 0.05, flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#404040', }}>
                 <Text style={{ fontSize: 15, color: '#fff', }}>JustifyContent</Text>
                 <Text style={{ fontSize: 15, color: '#fff', }}>AlignItems</Text>
                 <Text style={{ fontSize: 15, color: '#fff', }}>FlexDirection</Text>
             </View>
-            <View style={{ flex: 0.1, flexDirection: 'row', }}>
+            <View style={{ flex: 0.1, flexDirection: 'row', backgroundColor: '#404040', alignItems: 'flex-end' }}>
                 <Picker
                     selectedValue={justify}
                     style={{ flex: 1, backgroundColor: '#27ae60', color: '#fff' }}
@@ -56,12 +60,12 @@ const MoveView = () => {
                     <Picker.Item label="row-reverse" value="row-reverse" />
                 </Picker>
             </View>
-
-            <View style={{ flex: 0.8, flexDirection: direct, justifyContent: justify, alignItems: align, }}>
+            <View style={{ flex: 1, flexDirection: direct, justifyContent: justify, alignItems: align }}>
                 <View style={{ width: 70, height: 70, backgroundColor: 'green', }} />
                 <View style={{ width: 70, height: 70, backgroundColor: 'blue', }} />
                 <View style={{ width: 70, height: 70, backgroundColor: 'red', }} />
             </View>
+            {setOk()}
         </View>
     )
 }

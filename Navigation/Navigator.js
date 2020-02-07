@@ -12,6 +12,8 @@ import Comp1 from '../Screens/Comp1'
 import TextInputExample from '../Screens/TextInputExample'
 import ViewTypes from '../Screens/ViewTypes'
 import MoveView from '../Screens/MoveView'
+import PlaySound from '../Screens/PlaySound'
+import StopWatch from '../Screens/StopWatch'
 
 const AppContainer = createStackNavigator({
     S1: {
@@ -29,8 +31,10 @@ const AppContainer = createStackNavigator({
     S8: { screen: TextInputExample },
     S9: { screen: ViewTypes },
     S10: { screen: MoveView },
+    S11: { screen: PlaySound },
+    S12: { screen: StopWatch },
 },
     {
-        initialRouteName: 'S10'
+        initialRouteName: 'S12'
     })
 export default createAppContainer(AppContainer)
