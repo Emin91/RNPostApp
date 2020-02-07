@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, TextInput, Picker } from 'react-native'
 
 
+
 const MoveView = () => {
 
     const [justify, setJustify] = useState('center')
     const [align, setAlign] = useState('center')
     const [direct, setDirect] = useState('column')
+
+    const [plus, setPlus] = useState(70)
 
     return (
         <View style={styles.mainView}>
@@ -53,6 +56,7 @@ const MoveView = () => {
                     <Picker.Item label="row-reverse" value="row-reverse" />
                 </Picker>
             </View>
+
             <View style={{ flex: 0.8, flexDirection: direct, justifyContent: justify, alignItems: align, }}>
                 <View style={{ width: 70, height: 70, backgroundColor: 'green', }} />
                 <View style={{ width: 70, height: 70, backgroundColor: 'blue', }} />
@@ -61,6 +65,7 @@ const MoveView = () => {
         </View>
     )
 }
+
 
 const styles = StyleSheet.create({
     mainView: {
