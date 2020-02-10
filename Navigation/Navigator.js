@@ -15,6 +15,7 @@ import MoveView from '../Screens/MoveView'
 import PlaySound from '../Screens/PlaySound'
 import StopWatch from '../Screens/StopWatch'
 import WidgetsTest from '../Screens/WidgetsTest'
+import JsonRead from '../Screens/JsonRead'
 
 const AppContainer = createStackNavigator({
     S1: {
@@ -35,8 +36,9 @@ const AppContainer = createStackNavigator({
     S11: { screen: PlaySound },
     S12: { screen: StopWatch },
     S13: { screen: WidgetsTest },
+    S14: { screen: JsonRead },
 },
     {
-        initialRouteName: 'S12'
+        initialRouteName: 'S13'
     })
 export default createAppContainer(AppContainer)
