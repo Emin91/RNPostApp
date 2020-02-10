@@ -14,6 +14,7 @@ import ViewTypes from '../Screens/ViewTypes'
 import MoveView from '../Screens/MoveView'
 import PlaySound from '../Screens/PlaySound'
 import StopWatch from '../Screens/StopWatch'
+import WidgetsTest from '../Screens/WidgetsTest'
 
 const AppContainer = createStackNavigator({
     S1: {
@@ -33,6 +34,7 @@ const AppContainer = createStackNavigator({
     S10: { screen: MoveView },
     S11: { screen: PlaySound },
     S12: { screen: StopWatch },
+    S13: { screen: WidgetsTest },
 },
     {
         initialRouteName: 'S12'

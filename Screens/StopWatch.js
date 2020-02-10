@@ -10,7 +10,7 @@ function Timer({interval, style}) {
             {duration.minutes()}:{duration.seconds()},{centiseconds}</Text>)
 }
 
-function RoundButton({title, color, background, onPress}){
+function RoundButton({title, color, background, onPress, disables}){
     return (
         <TouchableOpacity style={[styles.button, {backgroundColor: background}]} onPress={onPress} activeOpacity={0.7}>
             <View style={styles.buttonBorder}>
